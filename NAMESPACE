@@ -1,0 +1,6 @@
+export("data_sm", "data_type",
+       "reason_for_skip", "sm_plot",
+       "qs_plot", "data_narrow",
+       "data_shorten", "select.survey_sp",
+       "filter.survey_sp")
+importFrom("tidyverse")
