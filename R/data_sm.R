@@ -171,7 +171,7 @@ function(test4, skip_logic2){
         ls_opts <- unlist(unname(all_next_questions[which(names(all_next_questions)==all_Qnums[j])]))
         ans <- test4[i, mcol]
         if (length(grep(",", ans))==1){
-          ans <- unlist(str_split(ans, ",")) # splits the multi answers into vector
+          ans <- unlist(strsplit(ans, ",")) # splits the multi answers into vector
         }
         
         for (l in ans){
