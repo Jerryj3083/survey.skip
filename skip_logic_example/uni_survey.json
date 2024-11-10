@@ -1,0 +1,141 @@
+{
+  "SurveyQuestions" : {
+    
+    "Q1" : {
+      "ColumnNumber" : 1,
+      "QuestionNumber" : "Q1",
+      "Question" : "Do you study at the University of Auckland?",
+      "QuestionType" : "List",
+      "NextQuestion" : [
+        { "Yes" : "Q2",
+         "No" : "Q4" }
+        ]
+    },
+    
+    "Q2" : {
+      "ColumnNumber" : 2,
+      "QuestionNumber" : "Q2",
+      "Question" : "How many courses are you taking this semester?",
+      "QuestionType" : "Repeat",
+      "QuestionsToRepeat" : [
+        "Q2.1",
+        "Q2.2",
+        "Q2.3"
+      ],
+      "MaxRepeats" : 6,
+      "NextQuestion" : "Q2.1"
+    },
+    
+    "Q2.1" : {
+      "ColumnNumber" : 3,
+      "QuestionNumber" : "Q2.1",
+      "Question" : "Do you enjoy the course?",
+      "QuestionType" : "Standard",
+      "NextQuestion" : "Q2.2"
+    },
+    
+    "Q2.2" : {
+      "ColumnNumber" : 4,
+      "QuestionNumber" : "Q2.2",
+      "Question" : "Do you like your lecturer?",
+      "QuestionType" : "Standard",
+      "NextQuestion" : "Q2.3"
+    },
+    
+    "Q2.3" : {
+      "ColumnNumber" : 5,
+      "QuestionNumber" : "Q2.3",
+      "Question" : "Are you coping with the course?",
+      "QuestionType" : "Standard",
+      "NextQuestion" : "Q3"
+    },
+    
+    "Q3" : {
+      "ColumnNumber" : 21,
+      "QuestionNumber" : "Q3",
+      "Question" : "Do you live on/near campus?",
+      "QuestionType" : "List",
+      "NextQuestion" : [
+        { "No" : "Q3.1",
+         "Yes" : "Q4" }
+        ]
+    },
+    
+    "Q3.1" : {
+      "ColumnNumber" : 22,
+      "QuestionNumber" : "Q3.1",
+      "Question" : "How long does it take to commute?",
+      "QuestionType" : "Standard",
+      "NextQuestion" : "Q3.2"
+    },
+    
+    "Q3.2" : {
+      "ColumnNumber" : 23,
+      "QuestionNumber" : "Q3.2",
+      "Question" : "Do you enjoy all your classes?",
+      "QuestionType" : "List",
+      "NextQuestion" : [
+        { "Yes" : "Q3.3",
+         "No" : "Q4" }
+        ]
+    },
+    
+    "Q3.3" : {
+      "ColumnNumber" : 24,
+      "QuestionNumber" : "Q3.3",
+      "Question" : "Do you dislike any lecturer?",
+      "QuestionType" : "Standard",
+      "NextQuestion" :  "Q4"
+    },
+    
+    "Q4" : {
+      "ColumnNumber" : 25,
+      "QuestionNumber" : "Q4",
+      "Question" : "How many times a week do you come to campus?",
+      "QuestionType" : "Repeat",
+      "QuestionsToRepeat" : "Q4.1",
+      "MaxRepeats" : 5,
+      "NextQuestion" : "Q4.1"
+    },
+    
+    "Q4.1" : {
+      "ColumnNumber" : 26,
+      "QuestionNumber" : "Q4.1",
+      "Question" : "How long do you stay on campus for?",
+      "QuestionType" : "Standard",
+      "NextQuestion" : "finish"
+    }
+
+    
+  },
+  
+  "ComputedQuestions" : {
+    
+    "Q3.2" : {
+      "ColumnNumber" : 23,
+      "QuestionNumber" : "Q3.2",
+      "ComputedFrom" : "Q2.1",
+      "ComputeType" : "Repeat",
+      "RepCond" : "all", 
+      "Computation" : [
+        { "Yes" : "TRUE",
+          "No" : "FALSE"}
+        ]
+      
+    },
+    
+    "Q3.3" : {
+      "ColumnNumber" : 24,
+      "QuestionNumber" : "Q3.3",
+      "ComputedFrom" : "Q2.2",
+      "ComputeType" : "Repeat",
+      "RepCond" : "any",
+      "Computation" : [
+        { "No" : "TRUE",
+          "Yes" : "FALSE"}
+        ]
+    }
+  }
+  
+}
+
