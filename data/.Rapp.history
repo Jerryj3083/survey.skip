@@ -1,0 +1,2 @@
+load("/Users/jerryjiang/survey.skip/data/household_survey.rda")
+head(household_survey)
