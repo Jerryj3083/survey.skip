@@ -361,7 +361,7 @@ function(test4, skip_logic2){
   
   
   
-  survey_obj <- list(data = test4, sm = sm, questions = list_of_qs2, columns = list_of_cols2, not_next = list_of_skip_reason1, col_names = sm_cols, full_qs = all_Qnames)
+  survey_obj <- list(data = test4, sm = sm, questions = list_of_qs2, columns = list_of_cols2, not_next = list_of_skip_reason1, col_names = sm_cols)
   class(survey_obj) <- "survey_sp"
   survey_obj
   
