@@ -7,3 +7,4 @@ Author: Jerry Jiang
 Maintainer: Jerry Jiang to <jjia403@aucklanduni.ac.nz>
 Description: This package allows users to identify the NA responses that come from either skipped questions or missing/non response data. 
 License: GPL-2
+LazyData: true
