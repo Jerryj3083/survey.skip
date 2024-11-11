@@ -1,4 +1,6 @@
 S3method('[', survey_sp)
+S3method(print, survey_sp)
+S3method(print, Skip_reason)
 
 export("data_sm", "data_type",
        "reason_for_skip", "sm_plot",
